@@ -1,0 +1,84 @@
+\hypertarget{_fast_l_e_d_controller_8h_source}{}\doxysection{Fast\+LEDController.\+h}
+\label{_fast_l_e_d_controller_8h_source}\index{src/FastLEDController.h@{src/FastLEDController.h}}
+\mbox{\hyperlink{_fast_l_e_d_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// MIT License}}
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// Copyright (c) 2022 Cameron King}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{// Permission is hereby granted, free of charge, to any person}}
+\DoxyCodeLine{6 \textcolor{comment}{// obtaining a copy of this software and associated documentation files}}
+\DoxyCodeLine{7 \textcolor{comment}{// (the "{}Software"{}), to deal in the Software without restriction,}}
+\DoxyCodeLine{8 \textcolor{comment}{// including without limitation the rights to use, copy, modify, merge,}}
+\DoxyCodeLine{9 \textcolor{comment}{// publish, distribute, sublicense, and/or sell copies of the Software,}}
+\DoxyCodeLine{10 \textcolor{comment}{// and to permit persons to whom the Software is furnished to do so,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following conditions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// The above copyright notice and this permission notice shall be}}
+\DoxyCodeLine{14 \textcolor{comment}{// included in all copies or substantial portions of the Software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// THE SOFTWARE IS PROVIDED "{}AS IS"{}, WITHOUT WARRANTY OF ANY KIND,}}
+\DoxyCodeLine{17 \textcolor{comment}{// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND}}
+\DoxyCodeLine{19 \textcolor{comment}{// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS}}
+\DoxyCodeLine{20 \textcolor{comment}{// BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN}}
+\DoxyCodeLine{21 \textcolor{comment}{// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN}}
+\DoxyCodeLine{22 \textcolor{comment}{// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}}
+\DoxyCodeLine{23 \textcolor{comment}{// SOFTWARE.}}
+\DoxyCodeLine{25 \textcolor{comment}{}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifndef LIGHTSHOW\_FASTLEDCONTROLLER\_H}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LIGHTSHOW\_FASTLEDCONTROLLER\_H}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_controller_8h}{Controller.h}}"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#if LIGHTSHOW\_FASTLED\_ENABLE == 1}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include "{}FastLED.h"{}}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{namespace }LightShow \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{// define LIGHTSHOW\_FASTLED\_DATA\_PIN for the purposes of library development}}
+\DoxyCodeLine{40 \textcolor{comment}{// however, the app developer will need to override this}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifndef LIGHTSHOW\_FASTLED\_DATA\_PIN}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define LIGHTSHOW\_FASTLED\_DATA\_PIN 0}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller}{FastLEDController}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} \{}
+\DoxyCodeLine{46  \textcolor{keyword}{public}:}
+\DoxyCodeLine{62   \textcolor{keyword}{explicit} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a3af2fe485080825cf8a287754fd0bdbc}{FastLEDController}}(uint32\_t num);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{67   \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ad2c6ac6ff889c84ea61332967af0f6ba}{\string~FastLEDController}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{78   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ade1423ad2f7e760b9ee74ed90a4f00ee}{Fade}}(uint32\_t fade\_ms, uint8\_t r, uint8\_t g, uint8\_t b) \textcolor{keyword}{override};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{87   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a7f8eba9b2f4d106ede736f896b0df933}{SetLEDs}}(uint8\_t r, uint8\_t g, uint8\_t b) \textcolor{keyword}{override};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{97   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ab14f25c2d51f4861da8fcd788189b44c}{SetLED}}(uint32\_t i, uint8\_t r, uint8\_t g, uint8\_t b) \textcolor{keyword}{override};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{103   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a06081890de7837dd2f1995e68dd672ca}{Update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105  \textcolor{keyword}{protected}:}
+\DoxyCodeLine{113   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ade1423ad2f7e760b9ee74ed90a4f00ee}{Fade}}(uint32\_t fade\_ms, CRGB c);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{121   CRGB *\mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ae0b20e4aab84b485c82b8199ce576b7b}{leds\_}};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{129   CLEDController *\mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a25842b9c1da2b3bccfe6873522386200}{controller\_}};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{132   uint32\_t \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a008c412d34dc1b3a5413f0cc735956ae}{num\_leds\_}};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134  \textcolor{keyword}{private}:}
+\DoxyCodeLine{142   \textcolor{comment}{// cppcheck-\/suppress uninitMemberVarPrivate}}
+\DoxyCodeLine{143   \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a3af2fe485080825cf8a287754fd0bdbc}{FastLEDController}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller}{FastLEDController}} \&c) \{\}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{153   \textcolor{comment}{// cppcheck-\/suppress operatorEqVarError}}
+\DoxyCodeLine{154   \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller}{FastLEDController}} \&operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller}{FastLEDController}} \&c) \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \}}
+\DoxyCodeLine{155 \};}
+\DoxyCodeLine{156 \}  \textcolor{comment}{// namespace LightShow}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// LIGHTSHOW\_FASTLED\_ENABLE}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// LIGHTSHOW\_FASTLEDCONTROLLER\_H}}
+
+\end{DoxyCode}

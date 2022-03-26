@@ -1,0 +1,191 @@
+\hypertarget{class_light_show_1_1_fast_l_e_d_controller}{}\doxysection{Light\+Show\+::Fast\+LEDController Class Reference}
+\label{class_light_show_1_1_fast_l_e_d_controller}\index{LightShow::FastLEDController@{LightShow::FastLEDController}}
+Inheritance diagram for Light\+Show\+::Fast\+LEDController\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light_show_1_1_fast_l_e_d_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a3af2fe485080825cf8a287754fd0bdbc}{Fast\+LEDController}} (uint32\+\_\+t num)
+\item 
+\mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ad2c6ac6ff889c84ea61332967af0f6ba}{$\sim$\+Fast\+LEDController}} ()
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ade1423ad2f7e760b9ee74ed90a4f00ee}{Fade}} (uint32\+\_\+t fade\+\_\+ms, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b) override
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a7f8eba9b2f4d106ede736f896b0df933}{Set\+LEDs}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b) override
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ab14f25c2d51f4861da8fcd788189b44c}{Set\+LED}} (uint32\+\_\+t i, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b) override
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a06081890de7837dd2f1995e68dd672ca}{Update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a96f7ff9f22c7b8c02e909ac92da6a91a}{Fade}} (uint32\+\_\+t fade\+\_\+ms, CRGB c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CRGB $\ast$ \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ae0b20e4aab84b485c82b8199ce576b7b}{leds\+\_\+}}
+\item 
+CLEDController $\ast$ \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a25842b9c1da2b3bccfe6873522386200}{controller\+\_\+}}
+\item 
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_a008c412d34dc1b3a5413f0cc735956ae}\label{class_light_show_1_1_fast_l_e_d_controller_a008c412d34dc1b3a5413f0cc735956ae}} 
+uint32\+\_\+t {\bfseries num\+\_\+leds\+\_\+}
+\begin{DoxyCompactList}\small\item\em the known size of the Neo\+Pixel strip, since it is frequently referenced \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_a3af2fe485080825cf8a287754fd0bdbc}\label{class_light_show_1_1_fast_l_e_d_controller_a3af2fe485080825cf8a287754fd0bdbc}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!FastLEDController@{FastLEDController}}
+\index{FastLEDController@{FastLEDController}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{FastLEDController()}{FastLEDController()}}
+{\footnotesize\ttfamily Light\+Show\+::\+Fast\+LEDController\+::\+Fast\+LEDController (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Create a Fast\+LED controller\+\_\+ for Neo\+Pixels.
+
+LIGHTSHOW\+\_\+\+FASTLED\+\_\+\+DATA\+\_\+\+PIN must be defined. For example\+: \#define LIGHTSHOW\+\_\+\+FASTLED\+\_\+\+DATA\+\_\+\+PIN PIN\+\_\+\+A1
+
+Creating more than one instance of this class is undefined behavior, though it may be supported by a future version of this library.
+
+HELP WANTED\+: If someone more experienced with Fast\+LED knows how to implement this in a cleaner way, so that multiple Fast\+LED controllers can co-\/exist referenced by separate instances of this class, a PR would be most welcome. 
+\begin{DoxyParams}{Parameters}
+{\em num} & the number of led\textquotesingle{}s to control \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_ad2c6ac6ff889c84ea61332967af0f6ba}\label{class_light_show_1_1_fast_l_e_d_controller_ad2c6ac6ff889c84ea61332967af0f6ba}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!````~FastLEDController@{$\sim$FastLEDController}}
+\index{````~FastLEDController@{$\sim$FastLEDController}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{$\sim$FastLEDController()}{~FastLEDController()}}
+{\footnotesize\ttfamily Light\+Show\+::\+Fast\+LEDController\+::$\sim$\+Fast\+LEDController (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop any running shows and delete objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_a96f7ff9f22c7b8c02e909ac92da6a91a}\label{class_light_show_1_1_fast_l_e_d_controller_a96f7ff9f22c7b8c02e909ac92da6a91a}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!Fade@{Fade}}
+\index{Fade@{Fade}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{Fade()}{Fade()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Fast\+LEDController\+::\+Fade (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms,  }\item[{CRGB}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fade to a color This is a blocking operation. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade \\
+\hline
+{\em c} & the hue color to fade to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_ade1423ad2f7e760b9ee74ed90a4f00ee}\label{class_light_show_1_1_fast_l_e_d_controller_ade1423ad2f7e760b9ee74ed90a4f00ee}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!Fade@{Fade}}
+\index{Fade@{Fade}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{Fade()}{Fade()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Fast\+LEDController\+::\+Fade (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Fade to a color This is a blocking operation. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_a5564ee5bccc9b33931a5cbf2f0e1421e}{Light\+Show\+::\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_ab14f25c2d51f4861da8fcd788189b44c}\label{class_light_show_1_1_fast_l_e_d_controller_ab14f25c2d51f4861da8fcd788189b44c}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!SetLED@{SetLED}}
+\index{SetLED@{SetLED}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{SetLED()}{SetLED()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Fast\+LEDController\+::\+Set\+LED (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{i,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set a single LED to a color 
+\begin{DoxyParams}{Parameters}
+{\em i} & the index of the LED to set (0-\/indexed) \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_a10e3950ace1945546c7825a3844e94a8}{Light\+Show\+::\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_a7f8eba9b2f4d106ede736f896b0df933}\label{class_light_show_1_1_fast_l_e_d_controller_a7f8eba9b2f4d106ede736f896b0df933}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!SetLEDs@{SetLEDs}}
+\index{SetLEDs@{SetLEDs}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{SetLEDs()}{SetLEDs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Fast\+LEDController\+::\+Set\+LEDs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set all LEDs to a color 
+\begin{DoxyParams}{Parameters}
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_af272d91626ce4320a9e933cfa107e430}{Light\+Show\+::\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_a06081890de7837dd2f1995e68dd672ca}\label{class_light_show_1_1_fast_l_e_d_controller_a06081890de7837dd2f1995e68dd672ca}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!Update@{Update}}
+\index{Update@{Update}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Fast\+LEDController\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+reads the local pixel values and pushing them to the leds\+\_\+ \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_aa566cedf2bfafac0e26c1d3f348408b6}{Light\+Show\+::\+Controller}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_a25842b9c1da2b3bccfe6873522386200}\label{class_light_show_1_1_fast_l_e_d_controller_a25842b9c1da2b3bccfe6873522386200}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!controller\_@{controller\_}}
+\index{controller\_@{controller\_}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{controller\_}{controller\_}}
+{\footnotesize\ttfamily CLEDController$\ast$ Light\+Show\+::\+Fast\+LEDController\+::controller\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+a pointer to the underlying controller
+
+This controller is created by us, but not owned by us. It will not be destroyed when this object destructs. \mbox{\Hypertarget{class_light_show_1_1_fast_l_e_d_controller_ae0b20e4aab84b485c82b8199ce576b7b}\label{class_light_show_1_1_fast_l_e_d_controller_ae0b20e4aab84b485c82b8199ce576b7b}} 
+\index{LightShow::FastLEDController@{LightShow::FastLEDController}!leds\_@{leds\_}}
+\index{leds\_@{leds\_}!LightShow::FastLEDController@{LightShow::FastLEDController}}
+\doxysubsubsection{\texorpdfstring{leds\_}{leds\_}}
+{\footnotesize\ttfamily CRGB$\ast$ Light\+Show\+::\+Fast\+LEDController\+::leds\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+a pointer to the led storage for direct access
+
+This controller is created by us, but not owned by us. It will not be destroyed when this object destructs. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_fast_l_e_d_controller_8h}{Fast\+LEDController.\+h}}\item 
+src/\mbox{\hyperlink{_fast_l_e_d_controller_8cc}{Fast\+LEDController.\+cc}}\end{DoxyCompactItemize}

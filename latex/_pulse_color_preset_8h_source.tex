@@ -1,0 +1,71 @@
+\hypertarget{_pulse_color_preset_8h_source}{}\doxysection{Pulse\+Color\+Preset.\+h}
+\label{_pulse_color_preset_8h_source}\index{src/PulseColorPreset.h@{src/PulseColorPreset.h}}
+\mbox{\hyperlink{_pulse_color_preset_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// MIT License}}
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// Copyright (c) 2022 Cameron King}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{// Permission is hereby granted, free of charge, to any person}}
+\DoxyCodeLine{6 \textcolor{comment}{// obtaining a copy of this software and associated documentation files}}
+\DoxyCodeLine{7 \textcolor{comment}{// (the "{}Software"{}), to deal in the Software without restriction,}}
+\DoxyCodeLine{8 \textcolor{comment}{// including without limitation the rights to use, copy, modify, merge,}}
+\DoxyCodeLine{9 \textcolor{comment}{// publish, distribute, sublicense, and/or sell copies of the Software,}}
+\DoxyCodeLine{10 \textcolor{comment}{// and to permit persons to whom the Software is furnished to do so,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following conditions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// The above copyright notice and this permission notice shall be}}
+\DoxyCodeLine{14 \textcolor{comment}{// included in all copies or substantial portions of the Software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// THE SOFTWARE IS PROVIDED "{}AS IS"{}, WITHOUT WARRANTY OF ANY KIND,}}
+\DoxyCodeLine{17 \textcolor{comment}{// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND}}
+\DoxyCodeLine{19 \textcolor{comment}{// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS}}
+\DoxyCodeLine{20 \textcolor{comment}{// BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN}}
+\DoxyCodeLine{21 \textcolor{comment}{// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN}}
+\DoxyCodeLine{22 \textcolor{comment}{// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}}
+\DoxyCodeLine{23 \textcolor{comment}{// SOFTWARE.}}
+\DoxyCodeLine{25 \textcolor{comment}{}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifndef LIGHTSHOW\_PRESET\_PULSECOLOR\_H}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LIGHTSHOW\_PRESET\_PULSECOLOR\_H}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_preset_8h}{Preset.h}}"{}}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{namespace }LightShow \{}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38 \textcolor{keyword}{class }\mbox{\hyperlink{class_light_show_1_1_pulse_color_preset}{PulseColorPreset}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_light_show_1_1_preset}{Preset}} \{}
+\DoxyCodeLine{39  \textcolor{keyword}{public}:}
+\DoxyCodeLine{49   \textcolor{keyword}{explicit} \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_abc21ce46430d6b1244ba5c3478650c4b}{PulseColorPreset}}(std::shared\_ptr<Controller> controller,}
+\DoxyCodeLine{50                             uint8\_t r = 0xFF, uint8\_t g = 0xFF,}
+\DoxyCodeLine{51                             uint8\_t b = 0xFF, uint32\_t interval = 1,}
+\DoxyCodeLine{52                             uint32\_t steps = 100);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{58   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_a4e2bb947d376d054177ca8599795eb07}{Loop}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60  \textcolor{keyword}{protected}:}
+\DoxyCodeLine{62   std::shared\_ptr<Controller> \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_a4fdd9a07a8354b7766a985893bd8e736}{controller\_}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65   uint8\_t \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_af0d95ab2dd14fe38dcc8362faba27472}{r\_}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68   uint8\_t \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_a1c35484935a01a9587d6dd02b4d86929}{g\_}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71   uint8\_t \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_aa1970a15251f0b2423defa1e583bf81f}{b\_}};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_aa95cdf63dbae6d1030c6cdf7fdeebb26}{advancing\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77   uint32\_t \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_adcc54eb43bb614a0b27ed574c55de706}{loop\_count\_}} = 0;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80   uint32\_t \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_a849ff4a571a9c63301720f5a9df1e427}{interval\_}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83   uint32\_t \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_af03b996a1b13eb830b9135e564640d67}{steps\_}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{86   uint32\_t \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_a4e5c84bba0e848432338208e0376e926}{steps\_taken\_}} = 0;}
+\DoxyCodeLine{87 \};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \}  \textcolor{comment}{// namespace LightShow}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// LIGHTSHOW\_PRESET\_PULSECOLOR\_H}}
+
+\end{DoxyCode}

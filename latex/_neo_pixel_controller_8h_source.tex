@@ -1,0 +1,103 @@
+\hypertarget{_neo_pixel_controller_8h_source}{}\doxysection{Neo\+Pixel\+Controller.\+h}
+\label{_neo_pixel_controller_8h_source}\index{src/NeoPixelController.h@{src/NeoPixelController.h}}
+\mbox{\hyperlink{_neo_pixel_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// MIT License}}
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// Copyright (c) 2022 Cameron King}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{// Permission is hereby granted, free of charge, to any person}}
+\DoxyCodeLine{6 \textcolor{comment}{// obtaining a copy of this software and associated documentation files}}
+\DoxyCodeLine{7 \textcolor{comment}{// (the "{}Software"{}), to deal in the Software without restriction,}}
+\DoxyCodeLine{8 \textcolor{comment}{// including without limitation the rights to use, copy, modify, merge,}}
+\DoxyCodeLine{9 \textcolor{comment}{// publish, distribute, sublicense, and/or sell copies of the Software,}}
+\DoxyCodeLine{10 \textcolor{comment}{// and to permit persons to whom the Software is furnished to do so,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following conditions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// The above copyright notice and this permission notice shall be}}
+\DoxyCodeLine{14 \textcolor{comment}{// included in all copies or substantial portions of the Software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// THE SOFTWARE IS PROVIDED "{}AS IS"{}, WITHOUT WARRANTY OF ANY KIND,}}
+\DoxyCodeLine{17 \textcolor{comment}{// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND}}
+\DoxyCodeLine{19 \textcolor{comment}{// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS}}
+\DoxyCodeLine{20 \textcolor{comment}{// BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN}}
+\DoxyCodeLine{21 \textcolor{comment}{// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN}}
+\DoxyCodeLine{22 \textcolor{comment}{// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}}
+\DoxyCodeLine{23 \textcolor{comment}{// SOFTWARE.}}
+\DoxyCodeLine{25 \textcolor{comment}{}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifndef LIGHTSHOW\_NEOPIXELCONTROLLER\_H}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LIGHTSHOW\_NEOPIXELCONTROLLER\_H}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_controller_8h}{Controller.h}}"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#if LIGHTSHOW\_NEOPIXEL\_ENABLE == 1}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include "{}Adafruit\_NeoPixel.h"{}}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{namespace }LightShow \{}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{49 \textcolor{keyword}{union }\mbox{\hyperlink{union_light_show_1_1_single_neo_pixel}{SingleNeoPixel}} \{}
+\DoxyCodeLine{50   \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{52     \textcolor{comment}{// cppcheck-\/suppress unusedStructMember}}
+\DoxyCodeLine{53     \textcolor{comment}{//   cppcheck does not correctly detect struct member usage via. arrays,}}
+\DoxyCodeLine{54     \textcolor{comment}{//   therefore generating a false warning}}
+\DoxyCodeLine{55     uint32\_t \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel_a4286b37248f8d70afd81842a72f7d20e}{c}};}
+\DoxyCodeLine{56   \};}
+\DoxyCodeLine{57   \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{59     \textcolor{comment}{// cppcheck-\/suppress unusedStructMember}}
+\DoxyCodeLine{60     uint8\_t \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel_ab4cdf496f0b95e832906be808af2f5ee}{b}};}
+\DoxyCodeLine{62     \textcolor{comment}{// cppcheck-\/suppress unusedStructMember}}
+\DoxyCodeLine{63     uint8\_t \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel_aa73c1a78f64222839cadecfe12d6836a}{g}};}
+\DoxyCodeLine{65     \textcolor{comment}{// cppcheck-\/suppress unusedStructMember}}
+\DoxyCodeLine{66     uint8\_t \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel_aa79c36fc3e908dc590cedc944c4f34fc}{r}};}
+\DoxyCodeLine{68     \textcolor{comment}{// cppcheck-\/suppress unusedStructMember}}
+\DoxyCodeLine{69     uint8\_t \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel_a9b22e54caebfce9a43b496050f05055a}{w}};}
+\DoxyCodeLine{70   \};}
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{class }\mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller}{NeoPixelController}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} \{}
+\DoxyCodeLine{74  \textcolor{keyword}{public}:}
+\DoxyCodeLine{86   \textcolor{keyword}{explicit} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a90fe419b8ffcf1614de223441e692173}{NeoPixelController}}(uint16\_t n, int16\_t pin = 6,}
+\DoxyCodeLine{87                               neoPixelType type = NEO\_GRB + NEO\_KHZ800);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{92   \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_afa1ad40895f79e9b1f3566bb2923b408}{\string~NeoPixelController}}();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{103   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}{Fade}}(uint32\_t fade\_ms, uint8\_t r, uint8\_t g, uint8\_t b) \textcolor{keyword}{override};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{112   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a6345669c6ef2129dc8f25ccc16474185}{SetLEDs}}(uint8\_t r, uint8\_t g, uint8\_t b) \textcolor{keyword}{override};}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{122   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_ad7ce24557c74c1758c8eedff026c1175}{SetLED}}(uint32\_t i, uint8\_t r, uint8\_t g, uint8\_t b) \textcolor{keyword}{override};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{128   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a5b80a60df0b9232beed2ba7d2b7e6a69}{Update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130  \textcolor{keyword}{protected}:}
+\DoxyCodeLine{138   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}{Fade}}(uint32\_t fade\_ms, uint32\_t c);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{147   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}{Fade}}(uint32\_t fade\_ms, \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel}{SingleNeoPixel}} p);}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{159   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}{Fade}}(uint32\_t fade\_ms, uint8\_t r, uint8\_t g, uint8\_t b, uint8\_t w);}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{169   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a6345669c6ef2129dc8f25ccc16474185}{SetLEDs}}(uint8\_t r, uint8\_t g, uint8\_t b, uint8\_t w);}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{180   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_ad7ce24557c74c1758c8eedff026c1175}{SetLED}}(uint32\_t i, uint8\_t r, uint8\_t g, uint8\_t b, uint8\_t w);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{183   std::unique\_ptr<Adafruit\_NeoPixel> \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_adaa03075e3ffe39a1873fd2fed78ea61}{neopixel\_}};}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{186   std::vector<SingleNeoPixel> \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a3710ed4c408538ee1eae834d87a94a01}{pixels\_}};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{189   uint32\_t \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a2df4006790d4da65649550494c51ade4}{num\_pixels\_}};}
+\DoxyCodeLine{190 \};}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 \}  \textcolor{comment}{// namespace LightShow}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// LIGHTSHOW\_NEOPIXEL\_ENABLE}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// LIGHTSHOW\_NEOPIXELCONTROLLER\_H}}
+
+\end{DoxyCode}

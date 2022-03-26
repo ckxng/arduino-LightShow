@@ -1,0 +1,165 @@
+\hypertarget{class_light_show_1_1_controller}{}\doxysection{Light\+Show\+::Controller Class Reference}
+\label{class_light_show_1_1_controller}\index{LightShow::Controller@{LightShow::Controller}}
+Inheritance diagram for Light\+Show\+::Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light_show_1_1_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_controller_a944be42c353815f11ffb9ba20fa27530}{Stop}} ()
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_controller_a6895f13f0338b089576bc73c0686d3f3}{Stop}} (uint32\+\_\+t fade\+\_\+ms)
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_controller_aa294bae80cc1781beb8ef463db1106c5}{Start}} (int preset)
+\item 
+virtual int \mbox{\hyperlink{class_light_show_1_1_controller_a3402ef7cb72ba7d28b9c2ea9633e8cbd}{Get\+Preset\+Count}} ()
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_controller_a5564ee5bccc9b33931a5cbf2f0e1421e}{Fade}} (uint32\+\_\+t fade\+\_\+ms, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)=0
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_controller_af272d91626ce4320a9e933cfa107e430}{Set\+LEDs}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)=0
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_controller_a10e3950ace1945546c7825a3844e94a8}{Set\+LED}} (uint32\+\_\+t i, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)=0
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_controller_aa566cedf2bfafac0e26c1d3f348408b6}{Update}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_controller_a5564ee5bccc9b33931a5cbf2f0e1421e}\label{class_light_show_1_1_controller_a5564ee5bccc9b33931a5cbf2f0e1421e}} 
+\index{LightShow::Controller@{LightShow::Controller}!Fade@{Fade}}
+\index{Fade@{Fade}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{Fade()}{Fade()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Controller\+::\+Fade (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Fade to a color This is a blocking operation. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ade1423ad2f7e760b9ee74ed90a4f00ee}{Light\+Show\+::\+Fast\+LEDController}}, and \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}{Light\+Show\+::\+Neo\+Pixel\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_controller_a3402ef7cb72ba7d28b9c2ea9633e8cbd}\label{class_light_show_1_1_controller_a3402ef7cb72ba7d28b9c2ea9633e8cbd}} 
+\index{LightShow::Controller@{LightShow::Controller}!GetPresetCount@{GetPresetCount}}
+\index{GetPresetCount@{GetPresetCount}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{GetPresetCount()}{GetPresetCount()}}
+{\footnotesize\ttfamily int Light\+Show\+::\+Controller\+::\+Get\+Preset\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+return how many presets are currently configured If this is 0, then no shows can be started. \begin{DoxyReturn}{Returns}
+the number of configured presets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_controller_a10e3950ace1945546c7825a3844e94a8}\label{class_light_show_1_1_controller_a10e3950ace1945546c7825a3844e94a8}} 
+\index{LightShow::Controller@{LightShow::Controller}!SetLED@{SetLED}}
+\index{SetLED@{SetLED}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{SetLED()}{SetLED()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Controller\+::\+Set\+LED (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{i,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set a single LED to a color 
+\begin{DoxyParams}{Parameters}
+{\em i} & the index of the LED to set (0-\/indexed) \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_ab14f25c2d51f4861da8fcd788189b44c}{Light\+Show\+::\+Fast\+LEDController}}, and \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_ad7ce24557c74c1758c8eedff026c1175}{Light\+Show\+::\+Neo\+Pixel\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_controller_af272d91626ce4320a9e933cfa107e430}\label{class_light_show_1_1_controller_af272d91626ce4320a9e933cfa107e430}} 
+\index{LightShow::Controller@{LightShow::Controller}!SetLEDs@{SetLEDs}}
+\index{SetLEDs@{SetLEDs}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{SetLEDs()}{SetLEDs()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Controller\+::\+Set\+LEDs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set all LEDs to a color 
+\begin{DoxyParams}{Parameters}
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a7f8eba9b2f4d106ede736f896b0df933}{Light\+Show\+::\+Fast\+LEDController}}, and \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a6345669c6ef2129dc8f25ccc16474185}{Light\+Show\+::\+Neo\+Pixel\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_controller_aa294bae80cc1781beb8ef463db1106c5}\label{class_light_show_1_1_controller_aa294bae80cc1781beb8ef463db1106c5}} 
+\index{LightShow::Controller@{LightShow::Controller}!Start@{Start}}
+\index{Start@{Start}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Controller\+::\+Start (\begin{DoxyParamCaption}\item[{int}]{preset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Start a scene 
+\begin{DoxyParams}{Parameters}
+{\em preset} & the current\+\_\+preset index of the scene to Start (0-\/indexed) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_controller_a944be42c353815f11ffb9ba20fa27530}\label{class_light_show_1_1_controller_a944be42c353815f11ffb9ba20fa27530}} 
+\index{LightShow::Controller@{LightShow::Controller}!Stop@{Stop}}
+\index{Stop@{Stop}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Controller\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Stop the currently running show. \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_controller_a6895f13f0338b089576bc73c0686d3f3}\label{class_light_show_1_1_controller_a6895f13f0338b089576bc73c0686d3f3}} 
+\index{LightShow::Controller@{LightShow::Controller}!Stop@{Stop}}
+\index{Stop@{Stop}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Controller\+::\+Stop (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms }\end{DoxyParamCaption})}
+
+Stop the currently running show. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade out the show \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_controller_aa566cedf2bfafac0e26c1d3f348408b6}\label{class_light_show_1_1_controller_aa566cedf2bfafac0e26c1d3f348408b6}} 
+\index{LightShow::Controller@{LightShow::Controller}!Update@{Update}}
+\index{Update@{Update}!LightShow::Controller@{LightShow::Controller}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Controller\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+reads the local pixel values and pushing them to the Neo\+Pixel \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_light_show_1_1_fast_l_e_d_controller_a06081890de7837dd2f1995e68dd672ca}{Light\+Show\+::\+Fast\+LEDController}}, and \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a5b80a60df0b9232beed2ba7d2b7e6a69}{Light\+Show\+::\+Neo\+Pixel\+Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_controller_8h}{Controller.\+h}}\item 
+src/\mbox{\hyperlink{_controller_8cc}{Controller.\+cc}}\end{DoxyCompactItemize}

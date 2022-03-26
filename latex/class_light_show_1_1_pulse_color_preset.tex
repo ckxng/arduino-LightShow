@@ -1,0 +1,98 @@
+\hypertarget{class_light_show_1_1_pulse_color_preset}{}\doxysection{Light\+Show\+::Pulse\+Color\+Preset Class Reference}
+\label{class_light_show_1_1_pulse_color_preset}\index{LightShow::PulseColorPreset@{LightShow::PulseColorPreset}}
+
+
+{\ttfamily \#include $<$Pulse\+Color\+Preset.\+h$>$}
+
+Inheritance diagram for Light\+Show\+::Pulse\+Color\+Preset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light_show_1_1_pulse_color_preset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_abc21ce46430d6b1244ba5c3478650c4b}{Pulse\+Color\+Preset}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} $>$ controller, uint8\+\_\+t r=0x\+FF, uint8\+\_\+t g=0x\+FF, uint8\+\_\+t b=0x\+FF, uint32\+\_\+t interval=1, uint32\+\_\+t steps=100)
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_a4e2bb947d376d054177ca8599795eb07}{Loop}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_a4fdd9a07a8354b7766a985893bd8e736}\label{class_light_show_1_1_pulse_color_preset_a4fdd9a07a8354b7766a985893bd8e736}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} $>$ {\bfseries controller\+\_\+}
+\begin{DoxyCompactList}\small\item\em controller that will be used to set LEDs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_af0d95ab2dd14fe38dcc8362faba27472}\label{class_light_show_1_1_pulse_color_preset_af0d95ab2dd14fe38dcc8362faba27472}} 
+uint8\+\_\+t {\bfseries r\+\_\+}
+\begin{DoxyCompactList}\small\item\em red byte of the color to cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_a1c35484935a01a9587d6dd02b4d86929}\label{class_light_show_1_1_pulse_color_preset_a1c35484935a01a9587d6dd02b4d86929}} 
+uint8\+\_\+t {\bfseries g\+\_\+}
+\begin{DoxyCompactList}\small\item\em green byte of the color to cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_aa1970a15251f0b2423defa1e583bf81f}\label{class_light_show_1_1_pulse_color_preset_aa1970a15251f0b2423defa1e583bf81f}} 
+uint8\+\_\+t {\bfseries b\+\_\+}
+\begin{DoxyCompactList}\small\item\em blue byte of the color to cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_aa95cdf63dbae6d1030c6cdf7fdeebb26}\label{class_light_show_1_1_pulse_color_preset_aa95cdf63dbae6d1030c6cdf7fdeebb26}} 
+bool {\bfseries advancing\+\_\+} = true
+\begin{DoxyCompactList}\small\item\em true if we are currently advancing towards the target color, else false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_adcc54eb43bb614a0b27ed574c55de706}\label{class_light_show_1_1_pulse_color_preset_adcc54eb43bb614a0b27ed574c55de706}} 
+uint32\+\_\+t {\bfseries loop\+\_\+count\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em how many times have we looped since the last change? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_a849ff4a571a9c63301720f5a9df1e427}\label{class_light_show_1_1_pulse_color_preset_a849ff4a571a9c63301720f5a9df1e427}} 
+uint32\+\_\+t {\bfseries interval\+\_\+}
+\begin{DoxyCompactList}\small\item\em how many loop cycles to skip before flipping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_af03b996a1b13eb830b9135e564640d67}\label{class_light_show_1_1_pulse_color_preset_af03b996a1b13eb830b9135e564640d67}} 
+uint32\+\_\+t {\bfseries steps\+\_\+}
+\begin{DoxyCompactList}\small\item\em how many steps should be taken between 0 and the target value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_a4e5c84bba0e848432338208e0376e926}\label{class_light_show_1_1_pulse_color_preset_a4e5c84bba0e848432338208e0376e926}} 
+uint32\+\_\+t {\bfseries steps\+\_\+taken\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em how many steps have been taken this cycle \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+fade a color in and out 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_abc21ce46430d6b1244ba5c3478650c4b}\label{class_light_show_1_1_pulse_color_preset_abc21ce46430d6b1244ba5c3478650c4b}} 
+\index{LightShow::PulseColorPreset@{LightShow::PulseColorPreset}!PulseColorPreset@{PulseColorPreset}}
+\index{PulseColorPreset@{PulseColorPreset}!LightShow::PulseColorPreset@{LightShow::PulseColorPreset}}
+\doxysubsubsection{\texorpdfstring{PulseColorPreset()}{PulseColorPreset()}}
+{\footnotesize\ttfamily Light\+Show\+::\+Pulse\+Color\+Preset\+::\+Pulse\+Color\+Preset (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} $>$}]{controller,  }\item[{uint8\+\_\+t}]{r = {\ttfamily 0xFF},  }\item[{uint8\+\_\+t}]{g = {\ttfamily 0xFF},  }\item[{uint8\+\_\+t}]{b = {\ttfamily 0xFF},  }\item[{uint32\+\_\+t}]{interval = {\ttfamily 1},  }\item[{uint32\+\_\+t}]{steps = {\ttfamily 100} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Create a current\+\_\+preset that flashes a color 
+\begin{DoxyParams}{Parameters}
+{\em controller} & the controller used to set LEDs \\
+\hline
+{\em r} & red 0-\/255 \\
+\hline
+{\em g} & green 0-\/255 \\
+\hline
+{\em b} & blue 0-\/255 \\
+\hline
+{\em interval} & the number of loop cycles between incremental color change \\
+\hline
+{\em steps} & the number of steps\+\_\+ to take between the target value \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_pulse_color_preset_a4e2bb947d376d054177ca8599795eb07}\label{class_light_show_1_1_pulse_color_preset_a4e2bb947d376d054177ca8599795eb07}} 
+\index{LightShow::PulseColorPreset@{LightShow::PulseColorPreset}!Loop@{Loop}}
+\index{Loop@{Loop}!LightShow::PulseColorPreset@{LightShow::PulseColorPreset}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Pulse\+Color\+Preset\+::\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Perform one loop \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_light_show_1_1_preset_a276f1c04e15e25df12db6b25636e5aea}{Light\+Show\+::\+Preset}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_pulse_color_preset_8h}{Pulse\+Color\+Preset.\+h}}\item 
+src/\mbox{\hyperlink{_pulse_color_preset_8cc}{Pulse\+Color\+Preset.\+cc}}\end{DoxyCompactItemize}

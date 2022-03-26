@@ -1,0 +1,90 @@
+\hypertarget{class_light_show_1_1_flash_color_preset}{}\doxysection{Light\+Show\+::Flash\+Color\+Preset Class Reference}
+\label{class_light_show_1_1_flash_color_preset}\index{LightShow::FlashColorPreset@{LightShow::FlashColorPreset}}
+
+
+{\ttfamily \#include $<$Flash\+Color\+Preset.\+h$>$}
+
+Inheritance diagram for Light\+Show\+::Flash\+Color\+Preset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light_show_1_1_flash_color_preset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_show_1_1_flash_color_preset_a3c91c2a66564eb951aceeceb73dc5fe2}{Flash\+Color\+Preset}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} $>$ controller, uint8\+\_\+t r=0x\+FF, uint8\+\_\+t g=0x\+FF, uint8\+\_\+t b=0x\+FF, uint32\+\_\+t interval=1)
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_flash_color_preset_a8acc9197d7f8faa484a78e42bef5edef}{Loop}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_ab5be189bd7055c18e4563776e7e86729}\label{class_light_show_1_1_flash_color_preset_ab5be189bd7055c18e4563776e7e86729}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} $>$ {\bfseries controller\+\_\+}
+\begin{DoxyCompactList}\small\item\em controller that will be used to set LEDs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_aa36f9779c203c72f059fdcbbabc99eed}\label{class_light_show_1_1_flash_color_preset_aa36f9779c203c72f059fdcbbabc99eed}} 
+uint8\+\_\+t {\bfseries r\+\_\+}
+\begin{DoxyCompactList}\small\item\em red byte of the color to cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_aedb8c465e70e7a3e090952172d8c2a71}\label{class_light_show_1_1_flash_color_preset_aedb8c465e70e7a3e090952172d8c2a71}} 
+uint8\+\_\+t {\bfseries g\+\_\+}
+\begin{DoxyCompactList}\small\item\em green byte of the color to cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_ad970484e7655ab34de8a0d80dbd7c487}\label{class_light_show_1_1_flash_color_preset_ad970484e7655ab34de8a0d80dbd7c487}} 
+uint8\+\_\+t {\bfseries b\+\_\+}
+\begin{DoxyCompactList}\small\item\em blue byte of the color to cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_a9a3e33ba040546b86a9a45b434d94bca}\label{class_light_show_1_1_flash_color_preset_a9a3e33ba040546b86a9a45b434d94bca}} 
+bool {\bfseries showing\+\_\+} = true
+\begin{DoxyCompactList}\small\item\em true if we are currently showing\+\_\+ the target color, else false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_a359395a2e9908f9fe1e0db9cbbd0dffd}\label{class_light_show_1_1_flash_color_preset_a359395a2e9908f9fe1e0db9cbbd0dffd}} 
+uint32\+\_\+t {\bfseries loop\+\_\+count\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em how many times have we looped since the last flip? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_ae6a7c806af8c45cb290d426cbb196265}\label{class_light_show_1_1_flash_color_preset_ae6a7c806af8c45cb290d426cbb196265}} 
+uint32\+\_\+t {\bfseries interval\+\_\+}
+\begin{DoxyCompactList}\small\item\em how many loop cycles to skip before flipping \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+flash a color 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_a3c91c2a66564eb951aceeceb73dc5fe2}\label{class_light_show_1_1_flash_color_preset_a3c91c2a66564eb951aceeceb73dc5fe2}} 
+\index{LightShow::FlashColorPreset@{LightShow::FlashColorPreset}!FlashColorPreset@{FlashColorPreset}}
+\index{FlashColorPreset@{FlashColorPreset}!LightShow::FlashColorPreset@{LightShow::FlashColorPreset}}
+\doxysubsubsection{\texorpdfstring{FlashColorPreset()}{FlashColorPreset()}}
+{\footnotesize\ttfamily Light\+Show\+::\+Flash\+Color\+Preset\+::\+Flash\+Color\+Preset (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} $>$}]{controller,  }\item[{uint8\+\_\+t}]{r = {\ttfamily 0xFF},  }\item[{uint8\+\_\+t}]{g = {\ttfamily 0xFF},  }\item[{uint8\+\_\+t}]{b = {\ttfamily 0xFF},  }\item[{uint32\+\_\+t}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Create a preset that flashes a color 
+\begin{DoxyParams}{Parameters}
+{\em controller} & the controller used to set LEDs \\
+\hline
+{\em r} & red 0-\/255 \\
+\hline
+{\em g} & green 0-\/255 \\
+\hline
+{\em b} & blue 0-\/255 \\
+\hline
+{\em interval} & the number of loop cycles between flashes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_flash_color_preset_a8acc9197d7f8faa484a78e42bef5edef}\label{class_light_show_1_1_flash_color_preset_a8acc9197d7f8faa484a78e42bef5edef}} 
+\index{LightShow::FlashColorPreset@{LightShow::FlashColorPreset}!Loop@{Loop}}
+\index{Loop@{Loop}!LightShow::FlashColorPreset@{LightShow::FlashColorPreset}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Flash\+Color\+Preset\+::\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Perform one loop \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_light_show_1_1_preset_a276f1c04e15e25df12db6b25636e5aea}{Light\+Show\+::\+Preset}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_flash_color_preset_8h}{Flash\+Color\+Preset.\+h}}\item 
+src/\mbox{\hyperlink{_flash_color_preset_8cc}{Flash\+Color\+Preset.\+cc}}\end{DoxyCompactItemize}

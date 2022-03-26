@@ -1,0 +1,72 @@
+\hypertarget{_error_8h}{}\doxysection{src/\+Error.h File Reference}
+\label{_error_8h}\index{src/Error.h@{src/Error.h}}
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Light\+Show\+::\+Error}} \+: int \{ \newline
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607ab7126b40b70e6cefe8eae2271942a073}{Light\+Show\+::\+No\+Error}} = 0x0000
+, \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607afa3bda5de018c91cb239f1e5dc1f91a5}{Light\+Show\+::\+No\+LEDStrip\+Connected}} = 0x0001
+, \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a8bceb45e15ca360c50b5cc88d2490e9e}{Light\+Show\+::\+Show\+Index\+Out\+Of\+Range}} = 0x0002
+, \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a4650592f302f38c0880a3879d3b54b5f}{Light\+Show\+::\+Show\+Undefined}} = 0x0004
+, \newline
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a545a50b0e42b13b596405c079599640f}{Light\+Show\+::\+LEDIndex\+Out\+Of\+Range}} = 0x0008
+ \}
+\begin{DoxyCompactList}\small\item\em Error code constants for Light\+Show. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_error_8cc_a9f006cf6517cdc6e59f8becaf19a85ff}{Light\+Show\+::\+Describe\+Error}} (Error e)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}\label{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}} 
+\index{Error.h@{Error.h}!Error@{Error}}
+\index{Error@{Error}!Error.h@{Error.h}}
+\doxysubsubsection{\texorpdfstring{Error}{Error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Light\+Show\+::\+Error}} \+: int}
+
+
+
+Error code constants for Light\+Show. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoError@{NoError}!Error.h@{Error.h}}\index{Error.h@{Error.h}!NoError@{NoError}}}\mbox{\Hypertarget{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607ab7126b40b70e6cefe8eae2271942a073}\label{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607ab7126b40b70e6cefe8eae2271942a073}} 
+No\+Error&Success / No Error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoLEDStripConnected@{NoLEDStripConnected}!Error.h@{Error.h}}\index{Error.h@{Error.h}!NoLEDStripConnected@{NoLEDStripConnected}}}\mbox{\Hypertarget{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607afa3bda5de018c91cb239f1e5dc1f91a5}\label{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607afa3bda5de018c91cb239f1e5dc1f91a5}} 
+No\+LEDStrip\+Connected&An LED Strip has not been connected to the show. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShowIndexOutOfRange@{ShowIndexOutOfRange}!Error.h@{Error.h}}\index{Error.h@{Error.h}!ShowIndexOutOfRange@{ShowIndexOutOfRange}}}\mbox{\Hypertarget{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a8bceb45e15ca360c50b5cc88d2490e9e}\label{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a8bceb45e15ca360c50b5cc88d2490e9e}} 
+Show\+Index\+Out\+Of\+Range&The show referenced by index does not exist. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShowUndefined@{ShowUndefined}!Error.h@{Error.h}}\index{Error.h@{Error.h}!ShowUndefined@{ShowUndefined}}}\mbox{\Hypertarget{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a4650592f302f38c0880a3879d3b54b5f}\label{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a4650592f302f38c0880a3879d3b54b5f}} 
+Show\+Undefined&The show referenced by index exists, but is not defined. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEDIndexOutOfRange@{LEDIndexOutOfRange}!Error.h@{Error.h}}\index{Error.h@{Error.h}!LEDIndexOutOfRange@{LEDIndexOutOfRange}}}\mbox{\Hypertarget{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a545a50b0e42b13b596405c079599640f}\label{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a545a50b0e42b13b596405c079599640f}} 
+LEDIndex\+Out\+Of\+Range&The LED referenced by index does not exist. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_error_8cc_a9f006cf6517cdc6e59f8becaf19a85ff}\label{_error_8cc_a9f006cf6517cdc6e59f8becaf19a85ff}} 
+\index{Error.h@{Error.h}!DescribeError@{DescribeError}}
+\index{DescribeError@{DescribeError}!Error.h@{Error.h}}
+\doxysubsubsection{\texorpdfstring{DescribeError()}{DescribeError()}}
+{\footnotesize\ttfamily std\+::string Light\+Show\+::\+Describe\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}}}]{e }\end{DoxyParamCaption})}
+
+describe an error code 
+\begin{DoxyParams}{Parameters}
+{\em e} & an error code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a description of the indicated error 
+\end{DoxyReturn}

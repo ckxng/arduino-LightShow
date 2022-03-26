@@ -1,0 +1,50 @@
+\hypertarget{_error_8h_source}{}\doxysection{Error.\+h}
+\label{_error_8h_source}\index{src/Error.h@{src/Error.h}}
+\mbox{\hyperlink{_error_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// MIT License}}
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// Copyright (c) 2022 Cameron King}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{comment}{// Permission is hereby granted, free of charge, to any person}}
+\DoxyCodeLine{6 \textcolor{comment}{// obtaining a copy of this software and associated documentation files}}
+\DoxyCodeLine{7 \textcolor{comment}{// (the "{}Software"{}), to deal in the Software without restriction,}}
+\DoxyCodeLine{8 \textcolor{comment}{// including without limitation the rights to use, copy, modify, merge,}}
+\DoxyCodeLine{9 \textcolor{comment}{// publish, distribute, sublicense, and/or sell copies of the Software,}}
+\DoxyCodeLine{10 \textcolor{comment}{// and to permit persons to whom the Software is furnished to do so,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following conditions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// The above copyright notice and this permission notice shall be}}
+\DoxyCodeLine{14 \textcolor{comment}{// included in all copies or substantial portions of the Software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// THE SOFTWARE IS PROVIDED "{}AS IS"{}, WITHOUT WARRANTY OF ANY KIND,}}
+\DoxyCodeLine{17 \textcolor{comment}{// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND}}
+\DoxyCodeLine{19 \textcolor{comment}{// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS}}
+\DoxyCodeLine{20 \textcolor{comment}{// BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN}}
+\DoxyCodeLine{21 \textcolor{comment}{// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN}}
+\DoxyCodeLine{22 \textcolor{comment}{// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}}
+\DoxyCodeLine{23 \textcolor{comment}{// SOFTWARE.}}
+\DoxyCodeLine{25 \textcolor{comment}{}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifndef LIGHTSHOW\_ERROR\_H}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LIGHTSHOW\_ERROR\_H}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{namespace }LightShow \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34 \textcolor{keyword}{enum} \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} : \textcolor{keywordtype}{int} \{}
+\DoxyCodeLine{36   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607ab7126b40b70e6cefe8eae2271942a073}{NoError}} = 0x0000,}
+\DoxyCodeLine{38   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607afa3bda5de018c91cb239f1e5dc1f91a5}{NoLEDStripConnected}} = 0x0001,}
+\DoxyCodeLine{40   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a8bceb45e15ca360c50b5cc88d2490e9e}{ShowIndexOutOfRange}} = 0x0002,}
+\DoxyCodeLine{42   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a4650592f302f38c0880a3879d3b54b5f}{ShowUndefined}} = 0x0004,}
+\DoxyCodeLine{44   \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607a545a50b0e42b13b596405c079599640f}{LEDIndexOutOfRange}} = 0x0008}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52 std::string DescribeError(Error e);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \}  \textcolor{comment}{// namespace LightShow}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// LIGHTSHOW\_ERROR\_H}}
+
+\end{DoxyCode}

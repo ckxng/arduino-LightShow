@@ -1,0 +1,260 @@
+\hypertarget{class_light_show_1_1_neo_pixel_controller}{}\doxysection{Light\+Show\+::Neo\+Pixel\+Controller Class Reference}
+\label{class_light_show_1_1_neo_pixel_controller}\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+Inheritance diagram for Light\+Show\+::Neo\+Pixel\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light_show_1_1_neo_pixel_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a90fe419b8ffcf1614de223441e692173}{Neo\+Pixel\+Controller}} (uint16\+\_\+t n, int16\+\_\+t pin=6, neo\+Pixel\+Type type=NEO\+\_\+\+GRB+NEO\+\_\+\+KHZ800)
+\item 
+\mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_afa1ad40895f79e9b1f3566bb2923b408}{$\sim$\+Neo\+Pixel\+Controller}} ()
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}{Fade}} (uint32\+\_\+t fade\+\_\+ms, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b) override
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a6345669c6ef2129dc8f25ccc16474185}{Set\+LEDs}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b) override
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_ad7ce24557c74c1758c8eedff026c1175}{Set\+LED}} (uint32\+\_\+t i, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b) override
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a5b80a60df0b9232beed2ba7d2b7e6a69}{Update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a3b8312e1fc4578673572f028064747f4}{Fade}} (uint32\+\_\+t fade\+\_\+ms, uint32\+\_\+t c)
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a20ac60776a16bb0dca812eefd84dfbe8}{Fade}} (uint32\+\_\+t fade\+\_\+ms, \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel}{Single\+Neo\+Pixel}} p)
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a8abe96962903db1c2c6e0fa46d226d6c}{Fade}} (uint32\+\_\+t fade\+\_\+ms, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_a036cf54b82779e8e0cfbf831c06d9898}{Set\+LEDs}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\item 
+\mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_neo_pixel_controller_ae49411950a7651dea9df45c68b552484}{Set\+LED}} (uint32\+\_\+t i, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_adaa03075e3ffe39a1873fd2fed78ea61}\label{class_light_show_1_1_neo_pixel_controller_adaa03075e3ffe39a1873fd2fed78ea61}} 
+std\+::unique\+\_\+ptr$<$ Adafruit\+\_\+\+Neo\+Pixel $>$ {\bfseries neopixel\+\_\+}
+\begin{DoxyCompactList}\small\item\em internal Neo\+Pixel object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a3710ed4c408538ee1eae834d87a94a01}\label{class_light_show_1_1_neo_pixel_controller_a3710ed4c408538ee1eae834d87a94a01}} 
+std\+::vector$<$ \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel}{Single\+Neo\+Pixel}} $>$ {\bfseries pixels\+\_\+}
+\begin{DoxyCompactList}\small\item\em a buffer containing the known state of pixels\+\_\+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a2df4006790d4da65649550494c51ade4}\label{class_light_show_1_1_neo_pixel_controller_a2df4006790d4da65649550494c51ade4}} 
+uint32\+\_\+t {\bfseries num\+\_\+pixels\+\_\+}
+\begin{DoxyCompactList}\small\item\em the known size of the Neo\+Pixel strip, since it is frequently referenced \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a90fe419b8ffcf1614de223441e692173}\label{class_light_show_1_1_neo_pixel_controller_a90fe419b8ffcf1614de223441e692173}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!NeoPixelController@{NeoPixelController}}
+\index{NeoPixelController@{NeoPixelController}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{NeoPixelController()}{NeoPixelController()}}
+{\footnotesize\ttfamily Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Neo\+Pixel\+Controller (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{n,  }\item[{int16\+\_\+t}]{pin = {\ttfamily 6},  }\item[{neo\+Pixel\+Type}]{type = {\ttfamily NEO\+\_\+GRB~+~NEO\+\_\+KHZ800} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Create Neo\+Pixel-\/based \mbox{\hyperlink{class_light_show_1_1_controller}{Controller}} by initializing a new Neo\+Pixel object. The Neo\+Pixel strip will be created and begin() will be called. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of Neo\+Pixels in strand. \\
+\hline
+{\em p} & Arduino pin number which will drive the Neo\+Pixel data in. \\
+\hline
+{\em t} & Pixel type -- add together NEO\+\_\+$\ast$ constants defined in Adafruit\+\_\+\+Neo\+Pixel.\+h, for example NEO\+\_\+\+GRB+\+NEO\+\_\+\+KHZ800 for Neo\+Pixels expecting an 800 KHz (vs 400 KHz) data stream with color bytes expressed in green, red, blue order per pixel. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_afa1ad40895f79e9b1f3566bb2923b408}\label{class_light_show_1_1_neo_pixel_controller_afa1ad40895f79e9b1f3566bb2923b408}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!````~NeoPixelController@{$\sim$NeoPixelController}}
+\index{````~NeoPixelController@{$\sim$NeoPixelController}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{$\sim$NeoPixelController()}{~NeoPixelController()}}
+{\footnotesize\ttfamily Light\+Show\+::\+Neo\+Pixel\+Controller\+::$\sim$\+Neo\+Pixel\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop any running shows and delete objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a20ac60776a16bb0dca812eefd84dfbe8}\label{class_light_show_1_1_neo_pixel_controller_a20ac60776a16bb0dca812eefd84dfbe8}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!Fade@{Fade}}
+\index{Fade@{Fade}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{Fade()}{Fade()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Fade (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms,  }\item[{\mbox{\hyperlink{union_light_show_1_1_single_neo_pixel}{Single\+Neo\+Pixel}}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fade to a color This is a blocking operation. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade \\
+\hline
+{\em p} & the hue color to fade to in \mbox{\hyperlink{union_light_show_1_1_single_neo_pixel}{Single\+Neo\+Pixel}} format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a3b8312e1fc4578673572f028064747f4}\label{class_light_show_1_1_neo_pixel_controller_a3b8312e1fc4578673572f028064747f4}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!Fade@{Fade}}
+\index{Fade@{Fade}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{Fade()}{Fade()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Fade (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms,  }\item[{uint32\+\_\+t}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fade to a color This is a blocking operation. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade \\
+\hline
+{\em c} & the hue color to fade to in 0x\+WWRRGGBB format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}\label{class_light_show_1_1_neo_pixel_controller_a2b241a9c65dff0564ee4120246f69e98}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!Fade@{Fade}}
+\index{Fade@{Fade}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{Fade()}{Fade()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Fade (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Fade to black, or another hue. This is a blocking operation. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_a5564ee5bccc9b33931a5cbf2f0e1421e}{Light\+Show\+::\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a8abe96962903db1c2c6e0fa46d226d6c}\label{class_light_show_1_1_neo_pixel_controller_a8abe96962903db1c2c6e0fa46d226d6c}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!Fade@{Fade}}
+\index{Fade@{Fade}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{Fade()}{Fade()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Fade (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{fade\+\_\+ms,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fade to a color This is a blocking operation. 
+\begin{DoxyParams}{Parameters}
+{\em fade\+\_\+ms} & the approximate number of milliseconds over which to fade \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+{\em w} & White brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_ad7ce24557c74c1758c8eedff026c1175}\label{class_light_show_1_1_neo_pixel_controller_ad7ce24557c74c1758c8eedff026c1175}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!SetLED@{SetLED}}
+\index{SetLED@{SetLED}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{SetLED()}{SetLED()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Set\+LED (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{i,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set a single LED to a color 
+\begin{DoxyParams}{Parameters}
+{\em i} & the index of the LED to set (0-\/indexed) \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_a10e3950ace1945546c7825a3844e94a8}{Light\+Show\+::\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_ae49411950a7651dea9df45c68b552484}\label{class_light_show_1_1_neo_pixel_controller_ae49411950a7651dea9df45c68b552484}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!SetLED@{SetLED}}
+\index{SetLED@{SetLED}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{SetLED()}{SetLED()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Set\+LED (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{i,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set a single LED to a color 
+\begin{DoxyParams}{Parameters}
+{\em i} & the index of the LED to set (0-\/indexed) \\
+\hline
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+{\em w} & White brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a6345669c6ef2129dc8f25ccc16474185}\label{class_light_show_1_1_neo_pixel_controller_a6345669c6ef2129dc8f25ccc16474185}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!SetLEDs@{SetLEDs}}
+\index{SetLEDs@{SetLEDs}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{SetLEDs()}{SetLEDs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Set\+LEDs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set all LEDs to a color 
+\begin{DoxyParams}{Parameters}
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_af272d91626ce4320a9e933cfa107e430}{Light\+Show\+::\+Controller}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a036cf54b82779e8e0cfbf831c06d9898}\label{class_light_show_1_1_neo_pixel_controller_a036cf54b82779e8e0cfbf831c06d9898}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!SetLEDs@{SetLEDs}}
+\index{SetLEDs@{SetLEDs}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{SetLEDs()}{SetLEDs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Set\+LEDs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set all LEDs to a color 
+\begin{DoxyParams}{Parameters}
+{\em r} & Red brightness, 0 to 255. \\
+\hline
+{\em g} & Green brightness, 0 to 255. \\
+\hline
+{\em b} & Blue brightness, 0 to 255. \\
+\hline
+{\em w} & White brightness, 0 to 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_show_1_1_neo_pixel_controller_a5b80a60df0b9232beed2ba7d2b7e6a69}\label{class_light_show_1_1_neo_pixel_controller_a5b80a60df0b9232beed2ba7d2b7e6a69}} 
+\index{LightShow::NeoPixelController@{LightShow::NeoPixelController}!Update@{Update}}
+\index{Update@{Update}!LightShow::NeoPixelController@{LightShow::NeoPixelController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Neo\+Pixel\+Controller\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+reads the local pixel values and pushing them to the Neo\+Pixel \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_light_show_1_1_controller_aa566cedf2bfafac0e26c1d3f348408b6}{Light\+Show\+::\+Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_neo_pixel_controller_8h}{Neo\+Pixel\+Controller.\+h}}\item 
+src/\mbox{\hyperlink{_neo_pixel_controller_8cc}{Neo\+Pixel\+Controller.\+cc}}\end{DoxyCompactItemize}

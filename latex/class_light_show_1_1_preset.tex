@@ -1,0 +1,72 @@
+\hypertarget{class_light_show_1_1_preset}{}\doxysection{Light\+Show\+::Preset Class Reference}
+\label{class_light_show_1_1_preset}\index{LightShow::Preset@{LightShow::Preset}}
+
+
+{\ttfamily \#include $<$Preset.\+h$>$}
+
+Inheritance diagram for Light\+Show\+::Preset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light_show_1_1_preset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_show_1_1_preset_aa5c7d42f860ceb11b5e5e7e538ded293}{Preset}} ()=default
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_preset_ab1a97a481f12d187799414430e8a5e2f}{Start}} ()
+\item 
+virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} \mbox{\hyperlink{class_light_show_1_1_preset_a276f1c04e15e25df12db6b25636e5aea}{Loop}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a base Light\+Show current\+\_\+preset that includes no instructions 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_preset_aa5c7d42f860ceb11b5e5e7e538ded293}\label{class_light_show_1_1_preset_aa5c7d42f860ceb11b5e5e7e538ded293}} 
+\index{LightShow::Preset@{LightShow::Preset}!Preset@{Preset}}
+\index{Preset@{Preset}!LightShow::Preset@{LightShow::Preset}}
+\doxysubsubsection{\texorpdfstring{Preset()}{Preset()}}
+{\footnotesize\ttfamily Light\+Show\+::\+Preset\+::\+Preset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Create a current\+\_\+preset that does nothing 
+\begin{DoxyParams}{Parameters}
+{\em controller} & the controller\+\_\+ that handles LED updates \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_show_1_1_preset_a276f1c04e15e25df12db6b25636e5aea}\label{class_light_show_1_1_preset_a276f1c04e15e25df12db6b25636e5aea}} 
+\index{LightShow::Preset@{LightShow::Preset}!Loop@{Loop}}
+\index{Loop@{Loop}!LightShow::Preset@{LightShow::Preset}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Preset\+::\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Perform one loop \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_light_show_1_1_flash_color_preset_a8acc9197d7f8faa484a78e42bef5edef}{Light\+Show\+::\+Flash\+Color\+Preset}}, and \mbox{\hyperlink{class_light_show_1_1_pulse_color_preset_a4e2bb947d376d054177ca8599795eb07}{Light\+Show\+::\+Pulse\+Color\+Preset}}.
+
+\mbox{\Hypertarget{class_light_show_1_1_preset_ab1a97a481f12d187799414430e8a5e2f}\label{class_light_show_1_1_preset_ab1a97a481f12d187799414430e8a5e2f}} 
+\index{LightShow::Preset@{LightShow::Preset}!Start@{Start}}
+\index{Start@{Start}!LightShow::Preset@{LightShow::Preset}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_error_8h_ae9afb6751dc5b2cbfc908f85b0c82607}{Error}} Light\+Show\+::\+Preset\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Start this current\+\_\+preset \begin{DoxyReturn}{Returns}
+0 on success or a Light\+Show\+::\+Error on error 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_light_show_1_1_solid_color_preset_aab89fce1a0931ed863dc45034174da14}{Light\+Show\+::\+Solid\+Color\+Preset}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_preset_8h}{Preset.\+h}}\end{DoxyCompactItemize}
