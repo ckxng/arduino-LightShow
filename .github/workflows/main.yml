@@ -28,10 +28,14 @@ jobs:
       # Creates docs directory
       - name: Create docs directory
         run: mkdir -p docs
-
-      # Copies README
-      - name: Create docs directory
-        run: cp README.md docs/
+        
+      # Renders README
+      - uses: ZacJW/markdown-html-action@1.1.0
+        with:
+          input_files: '[["README.md"]]'
+          output_files: '["docs/index.html"]'
+          packages: 'pymdown-extensions'
+          extensions: '["pymdownx.extra"]'
 
       # Generate documentation
       - name: Doxygen Action
