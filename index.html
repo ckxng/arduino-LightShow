@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<h1>LightShow</h1>
+<p>LightShow is a C++11 library for displaying light patterns on NeoPixel strips.</p>
+<h2>Supported Library Versions</h2>
+<p>This library has been designed and tested using:</p>
+<ul>
+<li>fastled/FastLED@^3.5.0</li>
+<li>adafruit/Adafruit NeoPixel@^1.10.4</li>
+</ul>
+<h2>NeoPixels vs FastLED</h2>
+<p>Both the NeoPixel and FastLED libraries are implemented as classes sharing a common LightShow::Controller interface. If
+one of these libraries is not available at compile-time in your development environment, you can disable all references
+to the offending library by editing LightShow.h and setting the related <code>#define LIGHTSHOW_*_ENABLE</code> entries to 0.</p>
+<p>Please note that the FastLED implementation is somewhat awkward, as FastLED is a static implementation, while the
+NeoPixel library is not. Creating more than one instance of the LightShow::FastLEDController is undefined behavior.</p>
+<h2>Usage</h2>
+<p>FastLED version:</p>
+<pre><code>#define CONFIG_NEOPIXEL_COUNT 30
+
+#include &lt;Arduino.h&gt;
+#include "FastLEDController.h"
+#include "PulseColorPreset.h"
+
+#include &lt;memory&gt;
+
+#define LIGHTSHOW_FASTLED_DATA_PIN PIN_A1
+auto controller =
+  std::make_shared&lt;LightShow::FastLEDController&gt;(CONFIG_NEOPIXEL_COUNT);
+
+auto preset = LightShow::PulseColorPreset(controller, 0xFF, 0, 0, 10000, 100);
+
+void setup() {
+  preset.Start();
+}
+
+void loop() {
+  preset.Loop();
+}
+</code></pre>
+<p>Neopixel version:</p>
+<pre><code>#define CONFIG_NEOPIXEL_COUNT 30
+
+#include &lt;Arduino.h&gt;
+#include "NeoPixelController.h"
+#include "PulseColorPreset.h"
+
+#include &lt;memory&gt;
+
+auto controller = std::make_shared&lt;LightShow::NeoPixelController&gt;(
+    CONFIG_NEOPIXEL_COUNT, PIN_A1);
+
+auto preset = LightShow::PulseColorPreset(controller, 0xFF, 0, 0, 10000, 100);
+
+void setup() {
+  preset.Start();
+}
+
+void loop() {
+  preset.Loop();
+}
+</code></pre>
+<h2>Multiple Presets</h2>
+<p>By instantiating multiple presets, you can assign those presets to pointer, which can then be switched between and
+Loop()ed on. This is a more advanced usage of the library, and requires at least a basic understanding of pointers in
+C++.</p>
+<pre><code>auto preset_flash =
+    std::make_shared&lt;LightShow::FlashColorPreset&gt;(controller, 0xFF, 0, 0, 10000);
+auto preset_solid =
+    std::make_shared&lt;LightShow::SolidColorPreset&gt;(controller, 0xFF, 0, 0);
+auto preset_pulse =
+    std::make_shared&lt;LightShow::PulseColorPreset&gt;(controller, 0xFF, 0, 0, 10000, 100);
+auto preset_blank = std::make_shared&lt;LightShow::Preset&gt;();
+
+std::shared_ptr&lt;LightShow::Preset&gt; current_preset = preset_blank;
+
+void SomeCodeThatChangesPresets() {
+  current_preset = preset_pulse;
+}
+</code></pre>
