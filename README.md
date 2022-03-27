@@ -1,6 +1,11 @@
+[![CI](https://github.com/ckxng/arduino-LightShow/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/ckxng/arduino-LightShow/actions/workflows/main.yml)
+
 # LightShow
 
 LightShow is a C++11 library for displaying light patterns on NeoPixel strips.
+
+## Docs
+See https://ckxng.github.io/arduino-LightShow/html/hierarchy.html
 
 ## Supported Library Versions
 
